@@ -1,0 +1,22 @@
+{
+  "name": "jest-testing-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nofursad/Jest-Testing-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nofursad/Jest-Testing-Game/issues"
+  },
+  "homepage": "https://github.com/nofursad/Jest-Testing-Game#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
