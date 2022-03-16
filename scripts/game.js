@@ -16,18 +16,28 @@ function newGame() {
 function addTurn() {
     game.playerMoves = [];
     game.currentGame.push(game.choices[(Math.floor(Math.random() * 4))]);
-    //showTurns();
+    showTurns();
 };
 
 function showScore() {
     document.getElementById("score").innerText = game.score;
 };
 
-function lightOn(circ) {
-    document.getElementById(circ).classList.add("Light");
+function lightsOn(circ) {
+    document.getElementById(circ).classList.add("light");
     setTimeout(() => {
-        document.getElementById(circ).classList.remove("Light");
+        document.getElementById(circ).classList.remove("light");
     }, 400);
 };
 
-module.exports = { game, newGame, showScore, addTurn, light };
+function showTurns() {
+    game.turnNumber = 0;
+    let turn = setInterval(() => {
+        lightsOn(game.currentGame[game.turnNumber]);
+        game.turnNumber++;
+        if (game.turnNumber >= game.currentGame.length) {
+            clearInterval(turns);
+        }
+    }, 800);
+}
+module.exports = { game, newGame, showScore, addTurn, lightsOn, showTurns };
